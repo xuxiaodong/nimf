@@ -54,6 +54,7 @@ modules/engines/nimf-m17n/icons/32x32/
 modules/engines/nimf-m17n/icons/48x48/
 modules/engines/nimf-m17n/icons/96x96/
 modules/engines/nimf-m17n/icons/256x256/
+modules/engines/nimf-m17n/icons/resized
 po/.intltool-merge-cache
 # gnome-builder
 .buildconfig
