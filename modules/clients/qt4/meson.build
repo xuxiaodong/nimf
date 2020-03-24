@@ -1,15 +1,13 @@
-qt4 = import('qt4')
-qt4_deps = dependency('qt4', modules: ['Core', 'Gui', 'Widgets'])
-qt4_core = dependency('QtCore')
-qt4_libdir = qt4_core.get_pkgconfig_variable('libdir')
-
+qt4_gui = dependency('QtGui')
+qt4_libdir = qt4_gui.get_pkgconfig_variable('libdir')
 qt4_im_module_dir = qt4_libdir + '/qt4/plugins/inputmethods'
 
+qt4 = import('qt4')
 moc_files = qt4.preprocess(moc_sources : 'im-nimf-qt4.cpp')
 
 cpp_args = ['-DG_LOG_DOMAIN="nimf"', '-DQT_NO_KEYWORDS']
 
-deps = [qt4_deps,
+deps = [qt4_gui,
     dependency('glib-2.0'),
     dependency('gobject-2.0'),
     dependency('gio-2.0')]

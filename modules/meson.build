@@ -18,7 +18,7 @@ endif
 
 subdir('clients/gtk')
 subdir('clients/qt5')
-if dependency('qt4', modules: ['Core', 'Gui', 'Widgets'], required : false).found()
+if get_option('with_nimf_qt4')
     subdir('clients/qt4')
 endif
 
