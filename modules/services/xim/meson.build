@@ -28,7 +28,7 @@ inc = [libnimf_inc, conf_inc]
 
 shared_library('nimf-xim',
     sources : sources,
-    include_directories : inc,
+	include_directories : inc,
     dependencies : deps,
     link_with : libnimf,
     c_args : c_args,

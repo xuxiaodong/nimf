@@ -17,9 +17,9 @@ if M17N_1_8_0_AVAILABLE
     c_args += '-DM17N_1_8_0_AVAILABLE'
 endif
 
-nimf_m17n = shared_library('nimf-m17n.c', 
+nimf_m17n = shared_library('nimf-m17n.c',
     sources : sources,
-    dependencies : deps,
+	dependencies : deps,
     include_directories : inc,
     c_args : c_args,
     link_with : libnimf,
@@ -33,7 +33,7 @@ link_with = [libnimf, nimf_m17n]
 foreach lang : langs
     sources = ['nimf-m17n-@0@.c'.format(lang), 'nimf-m17n.h']
     shared_library('nimf-m17n-@0@'.format(lang),
-        sources: sources, 
+    	sources: sources, 
         dependencies: deps, 
         include_directories: inc, 
         c_args: c_args, 

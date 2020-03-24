@@ -8,9 +8,9 @@ libdir = get_option('libdir')
 c_args = ['-DG_LOG_DOMAIN="nimf"',
     '-DMSSYMBOL_PATH="@0@/@1@"'.format(libdir + '/nimf', 'mssymbol.txt')]
 
-nimf_libhangul = shared_library('nimf-libhangul', 
+nimf_libhangul = shared_library('nimf-libhangul',
     sources : sources,
-    dependencies : deps,
+	dependencies : deps,
     include_directories : inc,
     c_args : c_args,
     link_with : libnimf,

@@ -5,7 +5,7 @@ inc = [libnimf_inc, conf_inc]
 
 shared_library('nimf-preedit-window',
     sources : 'nimf-preedit-window.c',
-    dependencies : deps,
+	dependencies : deps,
     include_directories : inc,
     c_args : c_args,
     link_with : libnimf,

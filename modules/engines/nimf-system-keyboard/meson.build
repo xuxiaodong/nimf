@@ -6,9 +6,9 @@ inc = include_directories('../../../libnimf')
 
 c_args = ['-DG_LOG_DOMAIN="nimf"']
 
-nimf_system_keyboard = shared_library('nimf-system-keyboard', 
+nimf_system_keyboard = shared_library('nimf-system-keyboard',
     sources : sources,
-    dependencies : deps,
+	dependencies : deps,
     include_directories : inc,
     c_args : c_args,
     link_with : libnimf,

@@ -17,9 +17,9 @@ inc = include_directories('../../../libnimf')
 
 c_args = ['-DG_LOG_DOMAIN="nimf"']
 
-nimf_anthy = shared_library('nimf-anthy', 
+nimf_anthy = shared_library('nimf-anthy',
     sources : sources,
-    dependencies : deps,
+	dependencies : deps,
     include_directories : inc,
     c_args : c_args,
     link_with : libnimf,

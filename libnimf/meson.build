@@ -88,9 +88,9 @@ c_args = ['-DNIMF_COMPILATION',
 	'-DG_LOG_DOMAIN="nimf"']
 
 libnimf = shared_library('nimf', sources,
+	version : meson.project_version(),
     dependencies: deps,
 	c_args : c_args,
-	# link_args : ['-version-info=1:0:0'],
     include_directories : inc,
 	install : true)
 
@@ -114,3 +114,9 @@ install_headers(headers, subdir : 'nimf')
 install_data('org.nimf.gschema.xml', 
 	install_dir: get_option('datadir') + '/glib-2.0/schemas')
 meson.add_install_script(meson.source_root() + '/meson_post_install.py')
+
+pkg = import('pkgconfig')
+pkg.generate(libraries : libnimf,
+	version : meson.project_version(),
+	name : 'nimf',
+	description : 'Nimf is an input method framework.')

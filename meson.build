@@ -1,6 +1,6 @@
 project('nimf', 
     'c', 'cpp',
-    version : '2019.08.14',
+    version : '1.2.0',
     license : 'LGPL3',
     meson_version : '>= 0.45.1',
     default_options : ['warning_level=1'])

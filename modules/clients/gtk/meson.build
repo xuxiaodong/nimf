@@ -19,7 +19,7 @@ assert(gtk3_query_immodules, 'gtk-query-immodules-3.0 not found')
 shared_library('im-nimf-gtk3',
     name_prefix : '',
     sources : 'im-nimf.c',
-    dependencies : [gtk3, dependency('glib-2.0')],
+	dependencies : [gtk3, dependency('glib-2.0')],
     include_directories : inc,
     c_args : c_args,
     link_with : libnimf,
@@ -41,7 +41,7 @@ gtk2_query_immodules = gtk2_query_immodules_exists or gtk2_query_immodules_exist
 assert(gtk2_query_immodules, 'gtk-query-immodules-2.0 not found')
 
 shared_library('im-nimf-gtk2',
-    name_prefix : '',
+	name_prefix : '',
     sources : 'im-nimf.c',
     dependencies : [gtk2, dependency('glib-2.0')],
     include_directories : inc,

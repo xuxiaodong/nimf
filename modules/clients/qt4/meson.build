@@ -12,9 +12,9 @@ deps = [qt4_gui,
     dependency('gobject-2.0'),
     dependency('gio-2.0')]
 
-shared_library('qt4im_nimf', 
+shared_library('qt4im_nimf',
     sources : ['im-nimf-qt4.cpp', moc_files],
-    include_directories: [libnimf_inc],
+	include_directories: [libnimf_inc],
     cpp_args : cpp_args,
     cpp_std : 'c++11',
     link_with: libnimf,
