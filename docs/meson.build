@@ -1,4 +1,5 @@
 if get_option('enable_gtk_doc')
+    subdir('xml')
     gnome = import('gnome')
 
     deps = [dependency('glib-2.0'),
