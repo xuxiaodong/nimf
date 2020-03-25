@@ -17,7 +17,7 @@ if M17N_1_8_0_AVAILABLE
     c_args += '-DM17N_1_8_0_AVAILABLE'
 endif
 
-nimf_m17n = shared_library('nimf-m17n.c',
+nimf_m17n = shared_library('nimf-m17n',
     sources : sources,
 	dependencies : deps,
     include_directories : inc,
