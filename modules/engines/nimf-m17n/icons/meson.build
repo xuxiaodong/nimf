@@ -11,7 +11,9 @@ foreach lang : langs
     foreach p : ['16', '22', '24', '32', '48', '96', '256']
         outdir = 'resized/@0@/'.format(p)
         run_command('mkdir', '-p', outdir)
-        run_command(rsvg_convert, '-w', p, '-h', p, '-o', outdir + scaled_icon, icon)
+        if run_command('[', '-f', outdir + scaled_icon, ']').returncode() != 0
+            run_command(rsvg_convert, '-w', p, '-h', p, '-o', outdir + scaled_icon, icon)
+        endif
         install_data(outdir + scaled_icon,
             install_dir : icon_theme_dir + '/@0@x@1@/status'.format(p, p))
     endforeach
