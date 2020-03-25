@@ -3,10 +3,10 @@ Section: utils
 Priority: optional
 Maintainer: Hodong Kim <cogniti@gmail.com>
 Build-Depends: debhelper (>= 9),
+               meson,
                dh-autoreconf,
                libglib2.0-dev (>= 2.54),
                pkg-config,
-               intltool (>= 0.50.1),
                libgtk-3-dev,
                libgtk-3-bin,
                libgtk2.0-dev,
@@ -15,7 +15,6 @@ Build-Depends: debhelper (>= 9),
                qtbase5-private-dev,
                libappindicator3-dev,
                librsvg2-bin,
-               fonts-noto-cjk,
                libhangul-dev,
                libanthy-dev,
                anthy,
@@ -28,7 +27,7 @@ Build-Depends: debhelper (>= 9),
                m17n-db (>= 1.7.0),
                gtk-doc-tools (>= 1.26)
 Standards-Version: 3.9.8
-Homepage: https://gitlab.com/nimf-i18n/nimf
+Homepage: https://github.com/hamonikr/nimf
 
 Package: nimf
 Architecture: any
