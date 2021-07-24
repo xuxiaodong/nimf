@@ -551,8 +551,8 @@ nimf_gtk_im_context_class_finalize (NimfGtkIMContextClass *class)
 static const GtkIMContextInfo nimf_info = {
   PACKAGE,          /* ID */
   N_("Nimf"),       /* Human readable name */
-  GETTEXT_PACKAGE,  /* Translation domain */
-  NIMF_LOCALE_DIR,  /* Directory for bindtextdomain */
+  "nimf",           /* GETTEXT_PACKAGE, Translation domain */
+  "/usr/share/locale", /*  NIMF_LOCALE_DIR, Directory for bindtextdomain */
   "ko:ja:zh"        /* Languages for which this module is the default */
 };
 

@@ -219,7 +219,7 @@ main (int argc, char **argv)
   };
 
   context = g_option_context_new ("- Nimf Input Method Server");
-  g_option_context_add_main_entries (context, entries, GETTEXT_PACKAGE);
+  g_option_context_add_main_entries (context, entries, "nimf");
   g_option_context_parse (context, &argc, &argv, &error);
   g_option_context_free (context);
 
