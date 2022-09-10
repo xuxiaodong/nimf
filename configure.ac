@@ -92,9 +92,9 @@ dnl ***************************************************************************
 dnl nimf-wayland
 dnl ***************************************************************************
 
-PKG_CHECK_MODULES(NIMF_WAYLAND_DEPS, [$LIBNIMF_REQUIRES]
-                                     wayland-client wayland-server
-                                     wayland-protocols xkbcommon)
+#PKG_CHECK_MODULES(NIMF_WAYLAND_DEPS, [$LIBNIMF_REQUIRES]
+#                                     wayland-client wayland-server
+#                                     wayland-protocols xkbcommon)
 
 dnl ***************************************************************************
 dnl nimf-xim
@@ -151,6 +151,5 @@ AC_CONFIG_FILES([
   modules/services/nim/Makefile
   modules/services/preedit-window/Makefile
   modules/services/xim/Makefile
-  modules/services/wayland/Makefile
 ])
 AC_OUTPUT
