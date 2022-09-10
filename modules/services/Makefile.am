@@ -1,3 +1,3 @@
-SUBDIRS = xim preedit-window candidate nim wayland
+SUBDIRS = xim preedit-window candidate nim
 
 DISTCLEANFILES = Makefile.in

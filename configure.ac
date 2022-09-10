@@ -88,9 +88,9 @@ if test "x$GTK_UPDATE_ICON_CACHE" = "xno"; then
   AC_MSG_ERROR([gtk-update-icon-cache-3.0 or gtk-update-icon-cache not found])
 fi
 
-dnl ***************************************************************************
-dnl nimf-wayland
-dnl ***************************************************************************
+#dnl ***************************************************************************
+#dnl nimf-wayland
+#dnl ***************************************************************************
 
 #PKG_CHECK_MODULES(NIMF_WAYLAND_DEPS, [$LIBNIMF_REQUIRES]
 #                                     wayland-client wayland-server
